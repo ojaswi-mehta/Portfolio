@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*___navbar___*/
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 0, 0, 0.5);
+  position: sticky;
+  top: 0;
+}
+.navbar ul {
+  display: flex;
+  list-style: none;
+  margin: 20px 0px;
+}
+.navbar ul li {
+  font-family: century;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 8px 25px;
+  transition: all 0.5s ease;
+}
+.navbar ul li a:hover {
+  background-color: white;
+  color: black;
+  box-shadow: 0 0 10px white;
+}
+
+/*_____Home_____*/
+
+#home {
+  display: flex;
+  height: 840px;
+  justify-content: center;
+  align-items: center;
+}
+#home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url("/Images/Untitled.png") no-repeat center center/cover;
+  height: 900px;
+  width: 100%;
+  z-index: -1;
+}
+
+.main {
+  align-items: center;
+  position: absolute;
+  top: 40%;
+  right: 10%;
+  font-size: 40px;
+}
+
+.heading {
+  font-family: century;
+  font-size: 3rem;
+  text-align: left;
+  margin: 40px 0px;
+}
+
+/*_________faq________*/
+
+.faq {
+  padding: 5% 12%;
+  text-align: center;
+  font-size: 10px;
+  box-sizing: border-box;
+  color: #fff;
+}
+.faq h2 {
+  font-weight: 500;
+  font-size: 40px;
+  color: black;
+}
+
+.accordion {
+  margin: 60px auto;
+  width: 100%;
+  max-width: 800px;
+}
+.accordion li {
+  list-style: none;
+  width: 100%;
+  padding: 5px;
+}
+.accordion li label {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  font-size: 22px;
+  font-weight: 500;
+  background: #303030;
+  margin-bottom: 2px;
+  cursor: pointer;
+  position: relative;
+}
+
+label::after {
+  content: "+";
+  font-size: 34px;
+  position: absolute;
+  right: 20px;
+  transition: transform 0.5s;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.accordion .content {
+  background: #303030;
+  text-align: left;
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s, padding 0.5s;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  display: flex;
+}
+.accordion input[type="radio"]:checked + label + .content {
+  max-height: 600px;
+  padding: 30px 20px;
+}
+.accordion input[type="radio"]:checked + label::after {
+  transform: rotate(135deg);
+}
+.faq .accordion .img-col img {
+  width: 300px;
+  padding: 10px 18px;
+}
+
+/* ___EDUCATION___*/
+.features {
+  padding: 50px 12%;
+  font-size: 22px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.features h1 {
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  padding-bottom: 50px;
+  padding-top: 4%;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 50px 0;
+
+  padding: 50px;
+}
+
+.text-col {
+  flex-basis: 50%;
+  margin-bottom: 20px;
+}
+.img-col {
+  flex-basis: 50%;
+  margin-bottom: 20px;
+}
+
+.img-col img {
+  display: block;
+  width: 400px;
+  margin: auto;
+}
+.features h2 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* ______Certifications______*/
+#certifications {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(0, 0, 0, 0.5);
+}
+.certi {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.certi img {
+  width: 360px;
+}
+.heading {
+  padding-top: 4%;
+  padding-bottom: 2%;
+  text-align: center;
+}
+.desc {
+  max-width: 400px;
+  padding-top: 10%;
+  padding-bottom: 100px;
+  font-size: 26px;
+}
